@@ -1,0 +1,32 @@
+#----------------------install boto----------------
+
+#You can use pip to install the latest released version of boto:
+pip install boto
+#If you want to install boto from source:
+git clone git://github.com/boto/boto.git
+cd boto
+python setup.py install
+
+#----------------------dependencies-----------------
+install opencv
+
+
+#-----------------------config----------------------
+
+#create a config file :
+vim /etc/boto.cfg
+
+#fill the content:
+[Credentials]
+AWSAccessKeyId = 
+AWSSecretKey = 
+
+#add the following sentence in ~/.bashrc 
+export AWS_CREDENTIAL_FILE=/etc/boto.cfg
+# and run:
+source ~/.bashrc
+
+#--------------------------------------------------
+copy the shell file 'taskExec' to /etc/init.d/
+#add a command into /etc/rc.local
+sudo /etc/init.d/taskExec start

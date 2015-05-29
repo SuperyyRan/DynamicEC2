@@ -1,0 +1,11 @@
+#
+1. install ec2 boto #details in ./rhapi/readme                                                                                  
+2. install pika
+3. install python-numpy #for mathematical calculation
+4. sudo apt-get install python-matplotlib
+#
+#-----------install rabbitmq-server-----------
+you need install the rabbitmq-server and pika in one vm
+
+
+
